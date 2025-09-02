@@ -26,7 +26,8 @@ export default {
 				foreground: 'hsl(var(--foreground))',
 				primary: {
 					DEFAULT: 'hsl(var(--primary))',
-					foreground: 'hsl(var(--primary-foreground))'
+					foreground: 'hsl(var(--primary-foreground))',
+					light: 'hsl(var(--primary-light))'
 				},
 				secondary: {
 					DEFAULT: 'hsl(var(--secondary))',
@@ -61,7 +62,25 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				zingbus: {
+					purple: 'hsl(var(--zingbus-purple))',
+					'purple-light': 'hsl(var(--zingbus-purple-light))',
+					green: 'hsl(var(--zingbus-green))',
+					pink: 'hsl(var(--zingbus-pink))',
+					gold: 'hsl(var(--zingbus-gold))',
+					gray: 'hsl(var(--zingbus-gray))',
+					'gray-light': 'hsl(var(--zingbus-gray-light))'
 				}
+			},
+			backgroundImage: {
+				'gradient-purple': 'var(--gradient-purple)',
+				'gradient-gold': 'var(--gradient-gold)',
+				'gradient-green': 'var(--gradient-green)'
+			},
+			boxShadow: {
+				'card': 'var(--shadow-card)',
+				'lg': 'var(--shadow-lg)'
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
