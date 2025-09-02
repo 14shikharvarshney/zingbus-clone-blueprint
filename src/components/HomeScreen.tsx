@@ -5,9 +5,10 @@ import BottomNavigation from "./BottomNavigation";
 
 interface HomeScreenProps {
   onSearch: () => void;
+  onTabChange?: (tab: string) => void;
 }
 
-const HomeScreen = ({ onSearch }: HomeScreenProps) => {
+const HomeScreen = ({ onSearch, onTabChange }: HomeScreenProps) => {
   const categories = [
     { name: "zingbus EV", color: "bg-zingbus-green", textColor: "text-white" },
     { name: "Leh", color: "bg-zingbus-purple", textColor: "text-white" },
@@ -154,7 +155,7 @@ const HomeScreen = ({ onSearch }: HomeScreenProps) => {
         <MessageCircle className="w-6 h-6 text-white" />
       </div>
 
-      <BottomNavigation activeTab="home" />
+      <BottomNavigation activeTab="home" onTabChange={onTabChange} />
     </div>
   );
 };

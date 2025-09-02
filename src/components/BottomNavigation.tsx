@@ -2,9 +2,10 @@ import { Home, Star, MapPin, Plus, Compass } from "lucide-react";
 
 interface BottomNavigationProps {
   activeTab: string;
+  onTabChange?: (tab: string) => void;
 }
 
-const BottomNavigation = ({ activeTab }: BottomNavigationProps) => {
+const BottomNavigation = ({ activeTab, onTabChange }: BottomNavigationProps) => {
   const tabs = [
     { id: "home", label: "Home", icon: Home },
     { id: "zingprime", label: "zingprime", icon: Star },
@@ -20,7 +21,7 @@ const BottomNavigation = ({ activeTab }: BottomNavigationProps) => {
           const Icon = tab.icon;
           const isActive = activeTab === tab.id;
           return (
-            <div key={tab.id} className="flex flex-col items-center py-1 px-2">
+            <div key={tab.id} className="flex flex-col items-center py-1 px-2 cursor-pointer" onClick={() => onTabChange?.(tab.id)}>
               <Icon 
                 className={`w-5 h-5 ${isActive ? 'text-zingbus-purple' : 'text-gray-500'}`} 
               />

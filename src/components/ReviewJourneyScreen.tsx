@@ -5,9 +5,10 @@ import StatusBar from "./StatusBar";
 
 interface ReviewJourneyScreenProps {
   onBack: () => void;
+  onProceedToPay: () => void;
 }
 
-const ReviewJourneyScreen = ({ onBack }: ReviewJourneyScreenProps) => {
+const ReviewJourneyScreen = ({ onBack, onProceedToPay }: ReviewJourneyScreenProps) => {
   const [passengerDetails, setPassengerDetails] = useState([
     { name: "", age: "", gender: "M" },
     { name: "", age: "", gender: "M" }
@@ -277,7 +278,7 @@ const ReviewJourneyScreen = ({ onBack }: ReviewJourneyScreenProps) => {
             <div className="text-xl font-bold">₹ 656</div>
             <div className="text-sm text-gray-500">for 2 seats</div>
           </div>
-          <Button className="bg-zingbus-purple hover:bg-zingbus-purple/90 text-white px-8 py-3 rounded-lg font-medium">
+          <Button className="bg-zingbus-purple hover:bg-zingbus-purple/90 text-white px-8 py-3 rounded-lg font-medium" onClick={onProceedToPay}>
             PROCEED TO PAY
           </Button>
         </div>
